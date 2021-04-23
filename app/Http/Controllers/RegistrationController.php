@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+
+use App\Http\Controllers\Controller;
+
+class RegistrationController extends Controller
+{
+    function InputRegistration(Request $request){
+        dd($request);
+        
+    }
+}
