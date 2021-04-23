@@ -49,7 +49,6 @@ $(document).ready(function(){
 })
 
 function InputDataRegistration(){
-    
     $.ajax({
         url : 'input-registrasi',
         data : {
