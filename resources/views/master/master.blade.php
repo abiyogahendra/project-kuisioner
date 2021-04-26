@@ -7,9 +7,11 @@
     <title>Penelitian Oh Yeah</title>
 
     <!-- Font Icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('registration/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
     <link rel="stylesheet" href="{{asset('registration/vendor/nouislider/nouislider.min.css')}}">
     <link rel="stylesheet" href="{{asset('radiobutton/radio.css')}}">
+    <link rel="stylesheet" href="{{asset('registration/css/yobri.css')}}">
 
     <!-- Main css -->
     <link rel="stylesheet" href="{{asset('registration/css/style.css')}}">
