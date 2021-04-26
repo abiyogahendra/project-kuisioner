@@ -3,7 +3,7 @@
     cursor: pointer;
     line-height: 20px;
     font-size: 14px;
-    margin: 15px;
+    /* margin: 15px; */
   }
   .radio .label {
     position: relative;

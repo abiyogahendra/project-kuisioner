@@ -324,7 +324,7 @@ input {
 
 .form-radio-group {
   padding-bottom: 10px;
-  padding-top: 12px; }
+  padding-top: -10px; }
 
 .form-radio-item {
   position: relative;

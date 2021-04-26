@@ -49,6 +49,8 @@
 // })
 
 function InputDataRegistration(){
+    var pekerjaan = document.getElementById("pekerjaan");
+    $('.alert').addClass('hide-dulu');
     $.ajax({
         url : 'input-registrasi',
         data : {
@@ -58,8 +60,8 @@ function InputDataRegistration(){
             umur    : $("input[name=umur]").val(),
             email    : $("input[name=email]").val(),
             phone_number    : $("input[name=phone_number]").val(),
-            pekerjaan    : $("input[name=pekerjaan]:selected").val(),
-            pengalaman    : $("input[name=pengalaman]").val(),
+            pekerjaan    : pekerjaan.value,
+            pengalaman    : $('input[name=pengalaman]:checked').val(),
         },
         type : 'post',
         dataType : 'json',
@@ -68,10 +70,10 @@ function InputDataRegistration(){
         },
         error : function(data){
             var a = data.responseJSON.errors;
-            console.log(a);
+            // console.log(a);
             $.each(a, function(index, value){
-                console.log(index)
-                $('input[name=' + index + ']').closest('.inputan').find(".alert").text(value).removeClass('hide-dulu');
+                // console.log(index)
+                $(' [name=' + index + ']').closest('.inputan').find(".alert").text(value).removeClass('hide-dulu');
             })
         }
     })

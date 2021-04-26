@@ -52,12 +52,9 @@
                         <div class="alert alert-danger hide-dulu" role="alert"> </div>
                     </div>
                     <div class="form-select inputan">
-                        <div class="label-flex">
-                            <label for="meal_preference">Pekerjaan</label>
-                        </div>
-                        <div class="select-list">
-                            <select name="pekerjaan" id="meal_preference">
-                                <option>Masukkan Pekerjaan Anda</option>
+                        <div class="form-group mb-2"> <label for="form_kota">Pilih Pekerjaan</label> 
+                            <select class="form-control js-example-basic-single" name="pekerjaan" id="pekerjaan" required="required" data-error="Masukkan Kota !!" >
+                                <option selected>Pilih Pekerjaan</option>
                                 <option value="Guru">Guru</option>
                                 <option value="Dosen">Dosen</option>
                                 <option value="Mahasiswa">Mahasiswa</option>
@@ -90,11 +87,15 @@
                     </div>
                 </div>
                 <div class="form-submit">
-                    <input class="submit" type="button" value="SUBMIT" onclick="InputDataRegistration()">
-                    <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                    <input class="submit" type="button" value="Lanjut" onclick="InputDataRegistration()">
                 </div>
             </form>
         </div>
+        <div class="data">
+        
+        
+        </div>
+
     </div>
 @endsection()
 

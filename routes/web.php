@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,4 @@ use App\Http\Controllers\RegistrationController;
 
 Route::get('/',[IndexController::class,'IndexRegistration']);
 Route::post('/input-registrasi',[RegistrationController::class,'InputRegistration']);
+Route::get('/question',[QuestionController::class,'QuestionIndex']);

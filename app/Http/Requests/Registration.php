@@ -27,10 +27,10 @@ class Registration extends FormRequest
             //
             'nama' => 'required',
             'jenkel' => 'required|in:Laki - Laki,Perempuan',
-            'umur' => 'required|greater than:17|',
+            'umur' => 'required|numeric|min:17',
             'email' => 'required|email',
-            'phone_number' => 'required',
-            'pekerjaan' => 'required|in:1,2,3',
+            'phone_number' => 'required|numeric',
+            'pekerjaan' => 'required|in:Guru,Dosen,Mahasiswa,Tutor,Lainnya',
             'pengalaman' => 'required|in:1,2,3',
         ];
     }

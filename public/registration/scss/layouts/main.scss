@@ -19,8 +19,13 @@
     @extend display-flex;
 }
 
-.register-form {
+.input-question{
     padding: 93px 115px 90px 80px;     
+    margin-bottom: -8px;
+}
+
+.register-form {
+    padding: 10px 115px 90px 80px;     
     margin-bottom: -8px;
 }
 .form-row {
