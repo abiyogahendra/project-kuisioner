@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 class RegistrationController extends Controller
 {
     function InputRegistration(Registration $request){
-        dd($request);
+        return response()->json([
+            'code'  => 200
+        ]);
     }
 }

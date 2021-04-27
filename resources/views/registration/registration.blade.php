@@ -10,7 +10,7 @@
                 <p>while seats are available !</p>
             </div>
         </div>
-        <div class="signup-form">
+        <div class="signup-form registration-form data-masuk">
             <form method="POST" class="register-form" id="register-form">
                 <div class="form-group">
                     <div class="form-input inputan">
@@ -89,10 +89,7 @@
                 </div>
             </form>
         </div>
-        <div class="data">
-        
-        
-        </div>
+       
 
     </div>
 @endsection()

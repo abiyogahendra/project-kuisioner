@@ -25,3 +25,4 @@ Route::get('/',[IndexController::class,'IndexRegistration']);
 Route::post('/input-registrasi',[RegistrationController::class,'InputRegistration']);
 Route::get('/question',[QuestionController::class,'QuestionIndex']);
 Route::post('/validation-question',[ValidationQuestionController::class,'ValidationController']);
+Route::post('/back-page-check',[ValidationQuestionController::class,'BackPageCheck']);

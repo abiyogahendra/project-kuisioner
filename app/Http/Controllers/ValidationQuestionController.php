@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use DB;
 
-class ValidationQuestionController extends Controller
-{
+class ValidationQuestionController extends Controller{
     function ValidationController(Request $request){
         $data = [];
         $i = 0;
@@ -24,10 +24,33 @@ class ValidationQuestionController extends Controller
                 'question.id_question'
             ])
             ->get();
+            // dd($q_id);
+        foreach($q_id as $q){
+            // $format = [$q->id_question => 'required'];
+            // $data = array_push($data, $format);
+            $data['soal' . $q->id_question] = 'required';
+        }
+        // dd($data);
 
-        dd($q_id);
+        $f =  $request->validate($data);    
+        
+        $get_count_page = DB::table('page')
+            ->count();
+        $next_page = $d['id_page'] + 1;
 
+        if($get_count_page == $d['id_page']){
+            return response()->json([
+                'code' => 500,
+            ]);
+        }else{
+            return response()->json([
+                'code'  => 200,
+                'next_page' => $next_page
+            ]);
+        }
+    }
 
-        return view('registration.registration');
+    function BackPageCheck(Request $request){
+        
     }
 }

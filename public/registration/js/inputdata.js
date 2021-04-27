@@ -1,53 +1,3 @@
-// $(document).ready(function(){
-//     $("#register-form").validate({
-//         rules: {
-//             nama_lengkap : {
-//                 required: true,
-//             },
-//             jenkel : {
-//                 required: true,
-//             },
-//             umur: {
-//                 required: true,
-//                 number: true,
-//                 min: 17
-//             },
-//             email: {
-//                 required: true,
-//                 email: true
-//             },
-//             phone_number: {
-//                 required: true,
-//                 number: true,
-//                 min: 18
-//             },
-//             pekerjaan : {
-//                 required: true,
-//             },
-//             pengalaman : {
-//                 required: true,
-//             },
-//         },
-//         messages : {
-//             name: {
-//                 minlength: "Name should be at least 3 characters"
-//             },
-//             umur: {
-//                 required: "Please enter your age",
-//                 number: "Please enter your age as a numerical value",
-//                 min: "You must be at least 17 years old"
-//             },
-//             email: {
-//                 email: "The email should be in the format: abc@domain.tld"
-//             },
-//             weight: {
-//                 required: "People with age over 50 have to enter their weight",
-//                 number: "Please enter your weight as a numerical value"
-//             }
-//         }
-//     });
-// })
-
 function InputDataRegistration(){
     var pekerjaan = document.getElementById("pekerjaan");
     $('.alert').addClass('hide-dulu');
@@ -66,7 +16,21 @@ function InputDataRegistration(){
         type : 'post',
         dataType : 'json',
         success : function(respon){
-
+            if(respon.code == 200){
+                $.ajax({
+                    url : 'question',
+                    type : 'get',
+                    dataType : 'html',
+                    success : function(html){
+                        $('registration-form').addClass('hide-dulu');
+                        if (!$(".page-1").length){
+                             $('.data-masuk').after(html);
+                        }
+                        $('.data-masuk').addClass('hiden-page');
+                        $('.page-1').removeClass('hiden-page');
+                    },
+                })
+            }
         },
         error : function(data){
             var a = data.responseJSON.errors;

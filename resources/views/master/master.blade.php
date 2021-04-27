@@ -31,6 +31,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script src="{{asset('registration/vendor/nouislider/nouislider.min.js')}}"></script>
     <script src="{{asset('registration/vendor/wnumb/wNumb.js')}}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="{{asset('registration/vendor/jquery-validation/dist/jquery.validate.min.js')}}"></script>
     <script src="{{asset('registration/vendor/jquery-validation/dist/additional-methods.min.js')}}"></script>
     <script src="{{asset('registration/js/main.js')}}"></script>
