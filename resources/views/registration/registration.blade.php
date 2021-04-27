@@ -23,16 +23,14 @@
                             <label for="payment">Jenis Kelamin</label>
                         </div>
                         <div class="form-radio-group">            
-                            <div class="form-radio-item">
-                                <input type="radio" value="Laki - Laki" name="jenkel" id="cash" checked>
-                                <label for="cash">Laki - Laki</label>
-                                <span class="check"></span>
-                            </div>
-                            <div class="form-radio-item">
-                                <input type="radio" value="Perempuan" name="jenkel" id="cheque">
-                                <label for="cheque">Perempuan</label>
-                                <span class="check"></span>
-                            </div>
+                                <label>
+                                    <input type="radio" value="Laki - Laki" name="jenkel"/>
+                                    <span class="label"></span> Laki - Laki
+                                </label>
+                                <label>
+                                    <input type="radio" value="Perempuan" name="jenkel" />
+                                    <span class="label"></span> Perempuan
+                                </label>
                         </div>
                         <div class="alert alert-danger hide-dulu" role="alert"></div>
                     </div>

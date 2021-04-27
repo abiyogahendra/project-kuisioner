@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Penelitian Oh Yeah</title>
@@ -10,7 +11,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('registration/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
     <link rel="stylesheet" href="{{asset('registration/vendor/nouislider/nouislider.min.css')}}">
-    <link rel="stylesheet" href="{{asset('radiobutton/radio.css')}}">
     <link rel="stylesheet" href="{{asset('registration/css/yobri.css')}}">
 
     <!-- Main css -->
@@ -34,6 +34,7 @@
     <script src="{{asset('registration/vendor/jquery-validation/dist/jquery.validate.min.js')}}"></script>
     <script src="{{asset('registration/vendor/jquery-validation/dist/additional-methods.min.js')}}"></script>
     <script src="{{asset('registration/js/main.js')}}"></script>
+    <script src="{{asset('validation/validation.js')}}"></script>
     <script src="{{asset('token.js')}}"></script>
     @yield('custom-script')
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->

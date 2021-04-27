@@ -339,8 +339,7 @@ input {
     text-transform: none; }
 
 .check {
-  display: inline-block;
-  position: absolute;
+  display: none;
   border: 1px solid #ebebeb;
   border-radius: 50%;
   -moz-border-radius: 50%;
@@ -371,13 +370,13 @@ input {
     transition: background 0.25s linear;
     -webkit-transition: background 0.25s linear; }
 
-input[type=radio] {
+/* input[type=radio] {
   position: absolute;
   visibility: hidden; }
   input[type=radio]:checked ~ .check {
     border: 1px solid #329e5e; }
   input[type=radio]:checked ~ .check::before {
-    background: #329e5e; }
+    background: #329e5e; } */
 
 ul {
   background: 0 0;

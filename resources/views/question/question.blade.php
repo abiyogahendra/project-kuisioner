@@ -15,7 +15,7 @@
                 @foreach($data_page as $d=>$a)
                 <fieldset>
                     <legend><h3>{{$a['name']}}</h3></legend>
-                    <form method="POST" class="question-form" id="question-form">
+                    <form method="POST" class="question-form" id="form-{{$a['id_page']}}">
                         @foreach($data_category as $s)
                             @if($s['id_page'] == $a['id_page'])
                                 <fieldset>
@@ -24,28 +24,28 @@
                                         <div class="form-radio inputan">
                                             @foreach($data_question as $d)
                                                 @if($d['id_category'] == $s['id'])
-                                                        <label>{{$d['question']}}</label>
+                                                    <label>{{$d['question']}}</label>
                                                     <div class="form-radio-group">            
-                                                            <label for="opt1" class="radio">
-                                                                <input type="radio" value="1" name="{{$d['id']}}" id="opt1" class="hidden"/>
-                                                                <span class="label"></span>1
-                                                            </label>
-                                                            <label for="opt2" class="radio">
-                                                                <input type="radio" value="2" name="{{$d['id']}}" id="opt2" class="hidden"/>
-                                                                <span class="label"></span>2
-                                                            </label>
-                                                            <label for="opt3" class="radio">
-                                                                <input type="radio" value="3" name="{{$d['id']}}" id="opt3" class="hidden"/>
-                                                                <span class="label"></span>3
-                                                            </label>
-                                                            <label for="opt3" class="radio">
-                                                                <input type="radio" value="4" name="{{$d['id']}}" id="opt4" class="hidden"/>
-                                                                <span class="label"></span>4
-                                                            </label>
-                                                            <label for="opt3" class="radio">
-                                                                <input type="radio" value="5" name="{{$d['id']}}" id="opt5" class="hidden"/>
-                                                                <span class="label"></span>5
-                                                            </label>
+                                                        <label>
+                                                            <input type="radio" value="1" name="{{$d['id']}}" Required>
+                                                            <span class="label"></span>1
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" value="2" name="{{$d['id']}}" Required>
+                                                            <span class="label"></span>2
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" value="3" name="{{$d['id']}}" Required>
+                                                            <span class="label"></span>3
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" value="4" name="{{$d['id']}}" Required>
+                                                            <span class="label"></span>4
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" value="5" name="{{$d['id']}}" Required>
+                                                            <span class="label"></span>5
+                                                        </label>
                                                     </div>
                                                     <div class="alert alert-danger hide-dulu" role="alert"> </div>
                                                 @endif
@@ -61,7 +61,7 @@
                                 @endif
                         @endforeach
                         <div class="form-submit">
-                            <input class="submit" type="button" value="Lanjut" onclick="InputDataRegistration()">
+                            <input class="submit" type="button" value="Lanjut" onclick="ValidationPerPage('{{$a['id_page']}}')">
                         </div>
                     </form>
                 </fieldset>
