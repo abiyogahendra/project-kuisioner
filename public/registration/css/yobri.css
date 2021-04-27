@@ -8,3 +8,7 @@
 .hiden-page{
     display: none;
 }
+legend{
+    padding-top: 30px;
+    padding-left: 20px;
+}

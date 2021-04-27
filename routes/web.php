@@ -5,6 +5,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ValidationQuestionController;
+use App\Http\Controllers\SubmitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,4 @@ Route::post('/input-registrasi',[RegistrationController::class,'InputRegistratio
 Route::get('/question',[QuestionController::class,'QuestionIndex']);
 Route::post('/validation-question',[ValidationQuestionController::class,'ValidationController']);
 Route::post('/back-page-check',[ValidationQuestionController::class,'BackPageCheck']);
+Route::post('/submit-data',[SubmitController::class,'SubmitAllData']);
