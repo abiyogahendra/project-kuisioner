@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use DB;
 
-class QuestionController extends Controller
-{
+class QuestionController extends Controller{
     function QuestionIndex(){
         $page = DB::table('page')
 

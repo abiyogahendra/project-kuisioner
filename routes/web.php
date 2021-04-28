@@ -7,6 +7,14 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ValidationQuestionController;
 use App\Http\Controllers\SubmitController;
 
+
+// login
+use App\Http\Controllers\Login\LoginController;
+
+// Admin
+use App\Http\Controllers\Admin\DashboardAdminController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +36,18 @@ Route::get('/question',[QuestionController::class,'QuestionIndex']);
 Route::post('/validation-question',[ValidationQuestionController::class,'ValidationController']);
 Route::post('/back-page-check',[ValidationQuestionController::class,'BackPageCheck']);
 Route::post('/submit-data',[SubmitController::class,'SubmitAllData']);
+
+
+// Login
+
+Route::get('/admin-login',[LoginController::class,'IndexLogin'])->name('index-login');
+Route::post('/process-login',[LoginController::class,'LoginAuthentication']);
+
+
+// admin
+Route::group(['middleware' => ['auth']], function(){
+    
+    Route::get('/admin-dashboard',[DashboardAdminController::class,'DashboardIndex']);
+
+
+});
