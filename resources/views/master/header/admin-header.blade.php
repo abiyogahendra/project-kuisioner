@@ -16,7 +16,7 @@
                     <li class="nav-item nav-active active nav-laporan">
                         <a class="nav-link" href="">
                             <i class="material-icons">assignment</i>
-                                <p>History Recognition</p>
+                                <p>History</p>
                         </a>
                     </li>
                     <!-- your sidebar here -->
