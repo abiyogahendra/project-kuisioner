@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\IndexController;
-use App\Http\Controllers\RegistrationController;
-use App\Http\Controllers\QuestionController;
-use App\Http\Controllers\ValidationQuestionController;
-use App\Http\Controllers\SubmitController;
+use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\RegistrationController;
+use App\Http\Controllers\Frontend\QuestionController;
+use App\Http\Controllers\Frontend\ValidationQuestionController;
+use App\Http\Controllers\Frontend\SubmitController;
 
 
 // login

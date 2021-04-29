@@ -64,6 +64,10 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
-    @yield('custom_script')     
+    @yield('custom_script')  
+
+    <!-- control page and data table-->
+    <script src="{{asset('/admin/js/page/page.js')}}"></script>
+
 </body>
 </html>
