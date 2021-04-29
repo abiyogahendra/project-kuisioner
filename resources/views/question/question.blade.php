@@ -14,24 +14,24 @@
                                             <label>{{$d['question']}}</label>
                                             <div class="form-radio-group">            
                                                 <label>
-                                                    <input type="radio" value="1" name="soal{{$d['id']}}" Required>
-                                                    <span class="label"></span>1
-                                                </label>
-                                                <label>
-                                                    <input type="radio" value="2" name="soal{{$d['id']}}" Required>
-                                                    <span class="label"></span>2
-                                                </label>
-                                                <label>
-                                                    <input type="radio" value="3" name="soal{{$d['id']}}" Required>
-                                                    <span class="label"></span>3
+                                                    <input type="radio" value="5" name="soal{{$d['id']}}" Required>
+                                                    <span class="label"></span>5
                                                 </label>
                                                 <label>
                                                     <input type="radio" value="4" name="soal{{$d['id']}}" Required>
                                                     <span class="label"></span>4
                                                 </label>
                                                 <label>
-                                                    <input type="radio" value="5" name="soal{{$d['id']}}" Required>
-                                                    <span class="label"></span>5
+                                                    <input type="radio" value="3" name="soal{{$d['id']}}" Required>
+                                                    <span class="label"></span>3
+                                                </label>
+                                                <label>
+                                                    <input type="radio" value="2" name="soal{{$d['id']}}" Required>
+                                                    <span class="label"></span>2
+                                                </label>
+                                                <label>
+                                                    <input type="radio" value="1" name="soal{{$d['id']}}" Required>
+                                                    <span class="label"></span>1
                                                 </label>
                                             </div>
                                         @endif

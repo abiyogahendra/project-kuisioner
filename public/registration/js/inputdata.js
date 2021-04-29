@@ -1,3 +1,20 @@
+$(document).ready(function(){
+    $('.register-form').addClass('hiden-page');
+})
+
+function NextRegistration(){
+    $('iframe').attr('src', $('iframe').attr('src'));
+    $('.register-form').removeClass('hiden-page');
+    $('.data-front').addClass('hiden-page');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function BackFrontPage(){
+    $('.data-front').removeClass('hiden-page');
+    $('.register-form').addClass('hiden-page');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
 function InputDataRegistration(){
     var pekerjaan = document.getElementById("pekerjaan");
     $('.alert').addClass('hide-dulu');
@@ -28,6 +45,7 @@ function InputDataRegistration(){
                         }
                         $('.data-masuk').addClass('hiden-page');
                         $('.page-1').removeClass('hiden-page');
+                        window.scrollTo({top: 0, behavior: 'smooth'});
                     },
                 })
             }
@@ -39,6 +57,7 @@ function InputDataRegistration(){
                 // console.log(index)
                 $(' [name=' + index + ']').closest('.inputan').find(".alert").text(value).removeClass('hide-dulu');
             })
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
     })
 }

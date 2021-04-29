@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\FrontPageController;
 use App\Http\Controllers\Frontend\RegistrationController;
 use App\Http\Controllers\Frontend\QuestionController;
 use App\Http\Controllers\Frontend\ValidationQuestionController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\Login\LoginController;
 // Admin
 use App\Http\Controllers\Admin\DashboardAdminController;
 
+use App\Http\Controllers\Modal\ReportIndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,7 @@ use App\Http\Controllers\Admin\DashboardAdminController;
 //     return view('welcome');
 // });
 
+// Route::get('/',[FrontPageController::class,'IndexFrontPage']);
 Route::get('/',[IndexController::class,'IndexRegistration']);
 Route::post('/input-registrasi',[RegistrationController::class,'InputRegistration']);
 Route::get('/question',[QuestionController::class,'QuestionIndex']);
@@ -48,6 +51,10 @@ Route::post('/process-login',[LoginController::class,'LoginAuthentication']);
 Route::group(['middleware' => ['auth']], function(){
     
     Route::get('/admin-dashboard',[DashboardAdminController::class,'DashboardIndex']);
+    Route::get('/data-report-admin',[DashboardAdminController::class,'ReportDataDashboard']);
+
+    // modal
+    Route::get('/index-modal-report',[ReportIndexController::class,'IndexModalReport']);
 
 
 });

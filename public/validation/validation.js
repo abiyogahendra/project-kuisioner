@@ -20,6 +20,7 @@ function ValidationPerPage(id){
                 console.log(d.next_page);
                 $('.page-' + id + '').addClass('hiden-page');
                 $('.page-' + d.next_page + '').removeClass('hiden-page');
+                window.scrollTo({top: 0, behavior: 'smooth'});
             }else{
                 Swal.fire({
                     title: 'Kirim Data ??',
@@ -87,6 +88,7 @@ function ValidationPerPage(id){
                 // console.log(index)
                 $(' [name=' + index + ']').closest('.inputan').find(".alert").removeClass('hide-dulu');
             })
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
     });
 }
@@ -96,9 +98,11 @@ function BackPage(id){
     if(back_page == 0){
         $('.page-' + id + '').addClass('hiden-page');
         $('.data-masuk').removeClass('hiden-page');
+        window.scrollTo({top: 0, behavior: 'smooth'});
 
     }else{
         $('.page-' + id + '').addClass('hiden-page');
         $('.page-' + back_page + '').removeClass('hiden-page');
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 }

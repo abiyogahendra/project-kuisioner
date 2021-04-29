@@ -15,6 +15,10 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="{{asset('registration/css/style.css')}}">
+
+    <!-- custom css by yobri -->
+    <link rel="stylesheet" href="{{asset('registration/css/yobri-responsive.css')}}">
+
 </head>
 <body>
     <input type="hidden" name="data_token" value="{{ @csrf_token() }}">

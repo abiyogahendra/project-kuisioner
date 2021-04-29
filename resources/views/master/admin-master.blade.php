@@ -47,7 +47,7 @@
                     @yield('content')
                 </div>
             </div>
-
+            @include('master.modal.modal-master')
             @include('master.footer.admin-footer')
         </div>
     </div>
@@ -56,7 +56,7 @@
 
     <script src="{{asset('/admin/js/core/popper.min.js')}}"></script>
     <script src="{{asset('/admin/js/core/bootstrap-material-design.min.js')}}"></script>
-    <script src="{{asset('/admin/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
+    <!-- <script src="{{asset('/admin/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script> -->
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{asset('/admin/js/material-dashboard.js?v=2.1.0')}}"></script>
     <!-- datatable   -->

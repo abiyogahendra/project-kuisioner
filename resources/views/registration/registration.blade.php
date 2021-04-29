@@ -6,11 +6,55 @@
         <div class="signup-img">
             <img src="{{asset('registration/images/form-img.jpg')}}" alt="">
             <div class="signup-img-content">
-                <h2>Register now </h2>
-                <p>while seats are available !</p>
+                <h2>Welcome</h2>
+                <p>let's join in our research</p>
             </div>
         </div>
         <div class="signup-form registration-form data-masuk">
+            <div class="row data-front">
+                <div class="col">
+                    <div class="row center mt-70px">
+                        <div class="col">
+                        <h3 class="center">Kuisioner untuk Evaluasi Usabilitas Media Belajar dalam Bentuk Game berbasis Mobile</h3>
+                        </div>
+                    </div>
+                    <div class="row ml-30px">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <h5>Petunjuk</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <ol>
+                                        <li>Sebelum melakukan pengisian kuisioner, responden akan memainkan game yang dipilih untuk diuji.</li>
+                                        <li>Install game “ Toon Math”  yang dapat di download di Playstore untuk versi android</li>
+                                        <li>Cobalah untuk mengeksplorasi semua menu yang ada,  misalnya setting, store, free chest dan yang paling  utama adalah menu untuk memainkan yaitu “ RUN”.</li>
+                                        <li>Mainkan game kurang lebih selama 5-10 menit.</li>
+                                        <li>Setelah selesai memainkan isilah kuisioner yang telah disediakan.</li>
+                                        <li>Isian terdiri dari nilai 5 s.d 1. Untuk nilai sangat sesuai isikan nilai 5 dan yang sangat tidak sesuai isikan nilai 1.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="row center">
+                                <div class="col">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/n_9Gqy_Cmp8?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="row mb-20px mt-20px">
+                        
+                        <div class="col">
+                            <div class="form-submit">
+                                <input class="submit" type="button" value="Lanjut" onclick="NextRegistration()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <form method="POST" class="register-form" id="register-form">
                 <div class="form-group">
                     <div class="form-input inputan">
@@ -84,9 +128,21 @@
                         <div class="alert alert-danger hide-dulu" role="alert"> </div>
                     </div>
                 </div>
-                <div class="form-submit">
-                    <input class="submit" type="button" value="Lanjut" onclick="InputDataRegistration()">
+                <div class="row">
+                    <div class="col">
+                        <div class="col">
+                            <div class="form-submit">
+                                <input class="submit" type="button" value="Kembali" onclick="BackFrontPage()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                         <div class="form-submit">
+                            <input class="submit" type="button" value="Lanjut" onclick="InputDataRegistration()">
+                        </div>
+                    </div>
                 </div>
+               
             </form>
         </div>
        
