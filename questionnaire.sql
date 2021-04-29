@@ -16,6 +16,39 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`questionnaire` /*!40100 DEFAULT CHARACT
 
 USE `questionnaire`;
 
+/*Table structure for table `admin` */
+
+DROP TABLE IF EXISTS `admin`;
+
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_admin`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `admin` */
+
+insert  into `admin`(`id_admin`,`name`,`email`,`password`) values 
+(1,'Admin','admin@admin.admin.com','$2y$10$Hp6PzGEe5TSrWRtoUJsNNuffsbWD9LRGUicre95xi2mxUuUk6r20a');
+
+/*Table structure for table `answer` */
+
+DROP TABLE IF EXISTS `answer`;
+
+CREATE TABLE `answer` (
+  `id_answer` int(11) NOT NULL AUTO_INCREMENT,
+  `id_respondent` int(11) DEFAULT NULL,
+  `id_question` int(11) DEFAULT NULL,
+  `answer` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_answer`)
+) ENGINE=InnoDB AUTO_INCREMENT=655 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `answer` */
+
 /*Table structure for table `category` */
 
 DROP TABLE IF EXISTS `category`;
@@ -79,7 +112,7 @@ CREATE TABLE `question` (
   `question` varchar(255) DEFAULT NULL,
   `language` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_question`)
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `question` */
 
@@ -203,14 +236,22 @@ CREATE TABLE `respondent` (
   `name` varchar(50) DEFAULT NULL,
   `jenkel` varchar(20) DEFAULT NULL,
   `umur` int(11) DEFAULT NULL,
-  `pekerjaan` varchar(50) DEFAULT NULL,
-  `pengalaman` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `phone_number` varchar(20) DEFAULT NULL,
+  `pekerjaan` varchar(50) DEFAULT NULL,
+  `pengalaman` varchar(50) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id_respondent`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `respondent` */
+
+insert  into `respondent`(`id_respondent`,`name`,`jenkel`,`umur`,`email`,`phone_number`,`pekerjaan`,`pengalaman`,`created_at`,`updated_at`) values 
+(2,'abiyoga hendra wijaya','Laki - Laki',22,'mackkhusus@gmail.com','082154926473','Guru','2','2021-04-28 04:46:17','2021-04-28 04:46:17'),
+(3,'abiyoga hendra wijaya','Laki - Laki',22,'admin@sasuka.com','082154926473','Guru','2','2021-04-28 04:52:15','2021-04-28 04:52:15'),
+(4,'abiyoga hendra wijaya','Laki - Laki',33,'abiyogakhusus@gmail.com','082154926473','Guru','3','2021-04-28 04:53:18','2021-04-28 04:53:18'),
+(5,'abiyoga hendra wijaya','Laki - Laki',44,'superadmin@sasuka.com','082154926473','Dosen','2','2021-04-28 04:55:16','2021-04-28 04:55:16');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
